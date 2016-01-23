@@ -1,0 +1,284 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr} % Para manejar los encabezados y pies de página
+\pagestyle{fancy} % Contenido de los encabezados y pies de página
+
+%--------Encabezado y pie de página---------------------
+\lhead{Física Computacional}
+\rhead{Actividad \# 1}
+\lfoot{Lic. en Física}
+\cfoot{\thepage\ de 9}
+\rfoot{Universidad de Sonora}
+
+%-------------------------------------------------------
+
+\begin{document}
+\title{Actividad 1: Resumen Artículo del Péndulo}
+\author{Valenzuela Carrillo María Inés }
+\date{21 de Enero del 2016}
+\maketitle
+
+\pagebreak
+
+\section{Introducción}
+Un péndulo es una masa suspendida de un pivote que puede oscilar libremente. Cuando un péndulo se mueve de su posición de equilibrio actúa sobre el una fuerza restauradora debida a la gravedad en dirección de su posición de equilibrio. Lo anterior combinado con la masa del péndulo hace que este oscile alrededor de la posición de equilibrio. Al tiempo que le toma al péndulo regresar a la posición inicial se le llama periodo.
+
+\begin{figure}[H]
+\centering		 			
+\includegraphics[width=6cm]{pendulo1.png}
+\caption{Péndulo}
+\end{figure} 
+
+Las matemáticas del péndulo son en general complicadas. Se puede simplificar haciendo suposiciones, como en el caso del péndulo simple que se puede resolver analíticamente para ángulos pequeños.
+
+\section{Péndulo Simple}
+
+Es una idealización de un péndulo real en un sistema aislado, usando las siguientes suposiciones:
+
+\begin{itemize}
+\item La cuerda que sostiene a la masa no se estira, no tiene masa y permanece tensa.
+\item La masa es puntual.
+\item El movimiento de la oscilación se da en dos dimensiones.
+\item No hay fricción ni resistencia del aire.
+\item El Campo gravitacional es uniforme.
+\item El soporte no se mueve.
+\end{itemize}
+
+La ecuación diferencial para representar el movimiento de un péndulo simple es:
+
+\begin{equation}
+\frac{d^2 \theta}{d t^2}+\frac{g}{l}\sin \theta=0
+\end{equation}
+
+Donde $g$ es la aceleración gravitacional, $l$ la longitud del péndulo y $\theta$ es el desplazamiento angular.
+ 
+\subsection{Ecuación del péndulo a partir de la fuerza}
+
+Considerando la figura 1, la cual muestra las fuerzas que actúan en un péndulo simple y la segunda ley de newton.
+
+\begin{equation}
+F=ma
+\end{equation}
+
+ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.30\textwidth]{newton.png}
+\caption{Fuerzas en el Péndulo Simple}
+\end{figure}
+
+Donde $F$ es la suma de las fuerzas sobre el objeto, $m$ es la masa y $a$ la acelaración. Como el objeto se mantiene sobre el arco de un círculo, solo se toma en cuenta la fuerza tangencial a este:
+
+\begin{equation}
+F=-m g\sin\theta = m a
+\end{equation}
+
+$$a= - g \sin \theta$$
+
+
+Donde $g$ es la aceleracón gravitacional.\\
+
+La aceleración lineal $a$ sobre el eje rojo puede relacionarse con el cambio del ángulo $\theta$ mediante la formula del arco $s$:
+ 
+\begin{equation}
+S=l\theta
+\end{equation}
+
+\begin{equation}
+v=\frac{ds}{dt} = l\frac{d\theta}{dt}
+\end{equation}
+
+\begin{equation}
+a=\frac{d^2 s}{dt^2} = l\frac{d^2 \theta}{dt^2}
+\end{equation}
+
+De las ecuaciones (6)y (3) se obtiene:
+
+\begin{equation}
+l\frac{d^2 \theta}{dt^2}= -g\sin \theta
+\end{equation}
+
+$$\frac{d^2 \theta}{dt^2}+ \frac{g}{l} \sin \theta =0 $$
+
+\subsection{Ecuación del péndulo a partir de la energía}
+
+Se puede obtener mediante la conservación de la energía mecánica: cualquier objeto que cae de una altura $h$ adquiere una energía cinética igual a la que pierde durante la caída. El cambio en la energía potencial y la cinética esta dado respectivamente por:
+
+\begin{equation}
+\Delta U=mgh
+\end{equation}
+
+\begin{equation}
+\Delta K=\frac{1}{2} mv^2
+\end{equation}
+
+Si no se pierde energía se pueden igualar las ecuaciones (8) y (9)
+
+\begin{equation}
+\frac{1}{2} mv^2 =mgh
+\end{equation}
+
+$$v=\sqrt{2gh}$$
+
+Utilizando la ecuación (5) se puede expresar
+
+\begin{equation}
+v = l\frac{d\theta}{dt}= \sqrt{2gh}
+\end{equation}
+
+$$\frac{d\theta}{dt}=\frac{1}{l}\sqrt{2gh}$$
+
+La figura 3 muestra la trigonometría de un péndulo simple.
+
+\begin{figure}[H]
+\centering		 			
+\includegraphics[width=6cm]{energia.png}
+\caption{Trigonemetía del péndulo simple}
+\end{figure} 
+
+Si el péndulo comienza a oscilar desde un ángulo inicial $\theta _0$, la distancia vertical $y_0$ esta dada por
+
+\begin{equation}
+y_0 = l\cos \theta_0
+\end{equation}
+
+De igual manera para $y_1$
+
+\begin{equation}
+y_1= l\cos \theta
+\end{equation}
+
+h es la diferencia de ambas
+
+\begin{equation}
+h=l(\cos \theta - \cos \theta_0)
+\end{equation}
+
+Sustituyendo la ecuación (14) en la (11) se obtiene
+
+\begin{equation}
+\frac{d\theta}{dt}=\sqrt{\frac{2g}{l}(\cos\theta-\cos \theta_0)}
+\end{equation}
+
+A partir de la ecuación anterior se puede obtener la aceleración derivando
+
+\begin{equation}
+\frac{d^2 \theta}{dt^2}=- \frac{g}{l} \sin \theta
+\end{equation}
+
+$$\frac{d^2 \theta}{dt^2}+ \frac{g}{l} \sin \theta =0 $$
+
+
+\section{Aproximación para Ángulos Pequeños}
+
+La ecuación dada no es facíl de resolver, sin embargo agregando un restricción al tamaño de $\theta$ puede ser resuelta de manera sencilla. Esta es asumiendo que el ángulo es mucho más pequeño que un radian.\\
+
+La aproximación para ángulos pequeños es una simplificación conveniente de las leyes trigonométricas que tiene una precisión aceptable cuando el ángulo tiende a cero. Surge de la linealización de las funciones trigonométricas, que se puede entender como un truncamiento de las correspondientes series de Taylor. Para un ángulo especificado en radianes \cite{ang}:
+
+ $$\sin\theta \simeq \theta$$
+ $$ \cos \theha \simeq 1 $$
+ $$ \tan \theta \simeq \theta $$
+ 
+Sustituyendo el seno mediante la aproximación para ángulos pequeños en la ecuación (7), se obtiene:
+
+\begin{equation}
+\frac{d^2 \theta}{dt^2}+ \frac{g}{l} \theta =0
+\end{equation}
+
+El movimiento es armónico simple cuando $\theta_0$ en la mitad de la amplitud de la oscilación. El tiempo del periodo, es decir, el tiempo que tarda en dar una oscilación completa es
+
+\begin{equation}
+T= 2\pi \sqrt{\frac{l}{g}}
+\end{equation}
+
+\section{Periodo de una Amplitud Arbitraria}
+
+Para amplitudes por encima de la aproximación para ángulos pequeños, se puede calcular el periodo exacto por la inversa de la ecuación (15).
+
+\begin{equation}
+\frac{dt}{d\theta}= \sqrt{\frac{l}{2g}} \frac{1}{\sqrt{\cos\theta - \cos \theta_0}}
+\end{equation}
+ 
+Y luego integrando sobre cuatro veces un cuarto de ciclo:\\
+ 
+$$T=4t(\theta_0 \rightarrow 0)$$\\
+
+Se puede escribir como
+
+\begin{equation}
+T= 4\sqrt{\frac{l}{2g}} \int_0^{\theta_0} \frac{1}{\sqrt{\cos\theta - \cos \theta_0}} d\theta
+\end{equation}
+
+Esta integral puede ser escrita en términos de integrales elípticas de como
+
+\begin{equation}
+T=4\sqrt{\frac{l}{g}} F \left(\frac{\theta_0}{2},\csc\frac{\theta_0}{2}\right)\csc\frac{\theta_0}{2}
+\end{equation}
+
+Donde $F$ es la integral elíptica incompleta de primera especie definida por
+
+\begin{equation}
+F(\varphi , k)= \int_0^{\varphi} \frac{1}{\sqrt{1-k^2 \sin^2 u}}du
+\end{equation}
+
+O mas consisamente por la sustitución $\sin u= \frac{\sin\frac{\theta}{2}}{\sin\frac{\theta_0}{2}}$ expresando $\theta$ en terminos de $u$.
+
+\begin{equation}
+T=4\sqrt{\frac{l}{g}} K \left(\sin^2\left(\frac{\theta_0}{2}\right)\right)
+\end{equation}
+
+Donde $K$ es la integral elíptica completa de primera especie definida por
+
+\begin{equation}
+K(k)=F\left(\frac{\phi}{2},k\right)= \int_0^{\frac{\pi}{2}} \frac{1}{\sqrt{1-k^2 \sin^2 u}}du
+\end{equation}
+
+\subsection{Formas de calcular la integral elíptica}
+
+\subsubsection{Solución del polinomio de Legendre para la integral elíptica  }
+
+\begin{equation*}
+K(k)=\frac{\pi}{2} \left \{ 1 + \left(\frac{1}{2}\right)^2 k^2 + \left(\frac{1 \cdotp 3}{2 \cdotp 4}\right)^2 k^4 + \cdots +\left[\frac{(2n-1)!!}{(2n)!!}\right]^2 k^{2n}+ \cdots \right \}
+\end{equation*}
+
+Donde $n!!$ denota doble factorial, usa solución exacta del periodo de un péndulo es
+
+\begin{equation*}
+T= 2\pi \sqrt{\frac{l}{g}}\left ( 1 + \left(\frac{1}{2}\right)^2 \sin^2 \left(\frac{\theta_0}{2}\right) + \left(\frac{1 \cdotp 3}{2 \cdotp 4}\right)^2 \sin^4\left(\frac{\theta_0}{2}\right) + \left(\frac{1 \cdotp 3 \cdotp 5 }{2 \cdotp 4 \cdotp 6}\right) \sin^6\left(\frac{\theta_0}{2}\right) + \cdots \right)
+\end{equation*}
+
+\begin{equation*}
+T=2\pi \sqrt{\frac{l}{g}} \sum_{n=0}^\infty \left[\left(\frac{(2n)!}{(2^n \cdotp n!)^2}\right)^2 \cdotp \sin^{2n} \left(\frac{\theta_0}{2}\right)\right] 
+\end{equation*}
+
+\subsubsection{Solución media aritmético-geométrica para la integral elíptica}
+
+\begin{equation*}
+K(k)= \frac{\frac{\pi}{2}}{M(1-k,1+k)}
+\end{equation*}
+
+Esta produce una formula para el periodo:\\
+
+\begin{equation*}
+T=\frac{2\pi}{M\left(1,\cos\left(\frac{\theta_0}{2} \right)\right)}\sqrt{\frac{l}{g}}
+\end{equation*}
+
+
+\pagebreak
+
+\begin{thebibliography}{X}
+\bibitem{Baz} \textsc{Wikipedia, the free encyclopedia},
+\textit{Pendulum (mathematics)}.
+\bibitem{ang} \textsc{Wikipedia, the free encyclopedia},
+\textit{Aproximación para ángulos pequeños}.
+\end{thebibliography}
+
+\end{document}
